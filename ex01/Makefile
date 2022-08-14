@@ -1,8 +1,8 @@
-NAME		= megaphone
+NAME		= phonebook
 
-SRCS		= megaphone.cpp
+SRCS		= phonebook.cpp contact.cpp
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -MMP -MD
+CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -I.
 OBJS		= $(SRCS:.cpp=.o)
 
 rm			= rm -f
@@ -20,4 +20,4 @@ fclean: clean
 
 re:			fclean all
 
-.PHONY: all fclean re
+.PHONY: all clean fclean re
