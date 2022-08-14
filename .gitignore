@@ -3,3 +3,4 @@ megaphone
 *.o
 *.d
 *.txt
+*.json
