@@ -12,6 +12,9 @@ Zombie *zombieHorde(int N, std::string name)
         exit(1);
     }
     for (int i = 0; i < N; i++)
+    {
+        zombie[i].setNum(i);
         zombie[i].setName(name);
+    }
     return (zombie);
 }
