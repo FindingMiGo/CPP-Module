@@ -2,6 +2,7 @@ megaphone
 phonebook
 zombie
 zombiehorde
+brain
 *.o
 *.d
 *.txt
