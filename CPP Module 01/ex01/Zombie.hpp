@@ -12,7 +12,7 @@ class Zombie
 		void	setName(std::string name);
 		void	setNum(int i);
 	private:
-		int			num;
+		int			_num;
 		std::string _name;
 };
 
