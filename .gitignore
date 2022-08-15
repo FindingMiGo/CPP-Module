@@ -1,6 +1,7 @@
 megaphone
 phonebook
 zombie
+zombiehorde
 *.o
 *.d
 *.txt
