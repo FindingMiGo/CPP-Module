@@ -8,4 +8,5 @@ violence
 *.d
 *.txt
 *.json
+*.replace
 ./vscode
