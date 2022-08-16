@@ -3,6 +3,7 @@ phonebook
 zombie
 zombiehorde
 brain
+violence
 *.o
 *.d
 *.txt
