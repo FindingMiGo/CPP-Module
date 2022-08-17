@@ -1,6 +1,6 @@
-NAME		= sed
+NAME		= harl
 
-SRCS		= main.cpp sed.cpp
+SRCS		= main.cpp Harl.cpp
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -pedantic -I. -std=c++98
 OBJS		= $(SRCS:.cpp=.o)

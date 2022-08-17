@@ -4,6 +4,8 @@ zombie
 zombiehorde
 brain
 violence
+sed
+harl
 *.o
 *.d
 *.txt
