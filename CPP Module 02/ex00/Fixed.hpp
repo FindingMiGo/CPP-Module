@@ -13,6 +13,7 @@ class Fixed {
 		void setRawBits( int const raw );
 	private:
 		int	_value;
+		static const int _bit = 8;
 };
 
 #endif
