@@ -7,9 +7,9 @@ violence
 sed
 harl
 fixed
+fixed01
 *.o
 *.d
 *.txt
 *.json
 *.replace
-./vscode
