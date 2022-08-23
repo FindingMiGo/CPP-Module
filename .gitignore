@@ -8,6 +8,9 @@ sed
 harl
 fixed
 fixed01
+fixed02
+ClapTrap00
+ClapTrap01
 *.o
 *.d
 *.txt
