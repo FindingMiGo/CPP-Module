@@ -3,7 +3,7 @@
 Brain::Brain(){
 	std::cout << "Constuctor called (Brain)" << std::endl;
 	for (int i = 0; i < 100; i++)
-		_ideas[i] = "";
+		_ideas[i] = 'B';
 }
 
 Brain::Brain(const Brain &b){
@@ -16,7 +16,6 @@ Brain::~Brain(){
 }
 
 Brain &Brain::operator=(const Brain &b){
-	std::cout << "Assigned Operator called (Brain)" << std::endl;
 	if (this != &b)	{
 		for (int i = 0; i < 100; i++)
 			_ideas[i] = b._ideas[i];

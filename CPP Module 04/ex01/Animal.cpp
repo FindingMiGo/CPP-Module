@@ -1,17 +1,17 @@
 #include "Animal.hpp"
 
 Animal::Animal(){
-	type = "none";
-	std::cout << "Animal constructor called" << std::endl;
+	type = "Animal";
+	std::cout << "Constructor called (Animal)" << std::endl;
 }
 
 Animal::Animal(const Animal &animal){
     *this = animal;
-    std::cout << "Animal copy constructor called" << std::endl;
+    std::cout << "Copy constructor called (Animal)" << std::endl;
 }
 
 Animal::~Animal(){
-    std::cout << "Animal destructor called" << std::endl;
+    std::cout << "Destructor called (Animal)" << std::endl;
 }
 
 Animal &Animal::operator=(const Animal &animal){
@@ -25,5 +25,5 @@ std::string Animal::getType()const{
 }
 
 void Animal::makeSound()const{
-    std::cout << " " << std::endl;
+    std::cout << "Animal makeSound() Called" << std::endl;
 }

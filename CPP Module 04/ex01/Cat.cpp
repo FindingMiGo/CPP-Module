@@ -18,7 +18,6 @@ Cat::~Cat(){
 }
 
 Cat &Cat::operator=(const Cat &Cat){
-    std::cout << "Assigned operator called (Cat)" << std::endl;
     if(this != &Cat){
         delete _brain;
         type = Cat.getType();

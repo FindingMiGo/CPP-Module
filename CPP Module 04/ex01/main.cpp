@@ -12,16 +12,14 @@ int main()
 
 	for (int i = 0; i < 10; i++)
 	{
-		if (i % 2 == 0)
+		if (i < 5)
 			animal[i] = new Dog();
 		else
 			animal[i] = new Cat();
 		animal[i]->makeSound();
 	}
 	for (int i = 0; i < 10; i++)
-	{
 		delete animal[i];
-	}
 	Dog basic;
 	{
 		Dog tmp = basic;
@@ -30,5 +28,4 @@ int main()
 	{
 		Cat tmp = basic2;
 	}
-	// system("leaks a.out");
 }
