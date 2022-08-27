@@ -2,16 +2,16 @@
 
 WrongCat::WrongCat():WrongAnimal(){
 	type = "WrongCat";
-	std::cout << "WrongCat constructor called" << std::endl;
+	std::cout << "Constructor called (WrongCat)" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat &wc):WrongAnimal(){
 	*this = wc;
-	std::cout << "WrongCat copy constructor called" << std::endl;
+	std::cout << "Copy constructor called (WrongCat)" << std::endl;
 }
 
 WrongCat::~WrongCat(){
-	std::cout << "WrongCat destructor called" << std::endl;
+	std::cout << "Destructor called (WrongCat)" << std::endl;
 }
 
 WrongCat &WrongCat::operator=(const WrongCat &wc){

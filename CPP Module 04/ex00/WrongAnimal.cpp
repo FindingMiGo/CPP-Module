@@ -2,16 +2,16 @@
 
 WrongAnimal::WrongAnimal(){
 	type = "WrongAnimal";
-	std::cout << "WrongAnimal constructor called" << std::endl;
+	std::cout << "Constructor called (WrongAnimal)" << std::endl;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal &wa){
 	*this = wa;
-	std::cout << "WrongAnimal copy constructor called" << std::endl;
+	std::cout << "Copy constructor called (WrongAnimal)" << std::endl;
 }
 
 WrongAnimal::~WrongAnimal(){
-	std::cout << "WrongAnimal destructor called" << std::endl;
+	std::cout << "Destructor called (WrongAnimal)" << std::endl;
 }
 
 WrongAnimal &WrongAnimal::operator=(const WrongAnimal &wa){

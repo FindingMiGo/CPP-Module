@@ -2,16 +2,16 @@
 
 Cat::Cat():Animal(){
 	type = "Cat";
-	std::cout << "Cat constructor called" << std::endl;
+	std::cout << "Constructor called (Cat)" << std::endl;
 }
 
 Cat::Cat(const Cat &cat):Animal(){
     *this = cat;
-    std::cout << "Cat copy constructor called" << std::endl;
+    std::cout << "Copy constructor called (Cat)" << std::endl;
 }
 
 Cat::~Cat(){
-    std::cout << "Cat destructor called" << std::endl;
+    std::cout << "Destructor called (Cat)" << std::endl;
 }
 
 Cat &Cat::operator=(const Cat &cat){
