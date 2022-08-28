@@ -1,4 +1,4 @@
-#include "sed.hpp"
+#include "Sed.hpp"
 
 Sed::Sed(char *filename, std::string str1, std::string str2) : _filename(filename), _str1(str1), _str2(str2)
 {}

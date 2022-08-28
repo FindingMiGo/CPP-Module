@@ -1,8 +1,8 @@
 NAME		= sed
 
-SRCS		= main.cpp sed.cpp
+SRCS		= main.cpp Sed.cpp
 CXX			= c++
-CXXFLAGS	= -Wall -Wextra -Werror -pedantic -I. -std=c++98
+CXXFLAGS	= -Wall -Wextra -Werror -I. -std=c++98
 OBJS		= $(SRCS:.cpp=.o)
 
 all:		$(NAME)
