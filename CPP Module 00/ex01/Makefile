@@ -5,8 +5,6 @@ CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -pedantic -I.
 OBJS		= $(SRCS:.cpp=.o)
 
-rm			= rm -f
-
 all:		$(NAME)
 
 $(NAME):	$(OBJS)
