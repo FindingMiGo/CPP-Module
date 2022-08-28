@@ -16,10 +16,12 @@ void	Sed::replaceStr()
 
 	std::ifstream	ifs(_filename);
 	if (ifs.fail()){
+		std::cout << "failed to open the file." << std::endl;
 		exit(1);
 	}
 	std::ofstream	ofs(newname);
 	if (ofs.fail()){
+		std::cout << "failed to open the file." << std::endl;
 		exit(1);
 	}
 
