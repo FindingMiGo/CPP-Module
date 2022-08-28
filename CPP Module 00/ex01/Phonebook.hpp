@@ -6,7 +6,7 @@
 #include <sstream>
 #include <iomanip>
 #include <string>
-#include "contact.hpp"
+#include "Contact.hpp"
 
 class phonebook
 {
@@ -20,10 +20,5 @@ class phonebook
 		void	repl();
 
 };
-
-phonebook::phonebook()
-{
-	num = 0;
-}
 
 #endif

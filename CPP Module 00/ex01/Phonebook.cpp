@@ -1,4 +1,4 @@
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
 void	printHedder()
 {
@@ -16,6 +16,11 @@ bool	isValidStr(std::string str)
 	if (str[0] >= '1' && str[0] <= '8')
 		return (true);
 	return (false);
+}
+
+phonebook::phonebook()
+{
+	num = 0;
 }
 
 void	phonebook::add()
