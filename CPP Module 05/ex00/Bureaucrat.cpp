@@ -45,10 +45,10 @@ void Bureaucrat::demotion(){
 	_grade++;
 }
 
-// const char *Bureaucrat::GradeTooHighException::what() const throw(){
-//     return "Grade Too High";
-// }
+const char *Bureaucrat::GradeTooHighException::what() const throw(){
+	return "too hight";
+}
 
-// const char *Bureaucrat::GradeTooLowException::what() const throw(){
-//     return "Grade Too Low";
-// }
+const char *Bureaucrat::GradeTooLowException::what() const throw(){
+	return "too low";
+}
