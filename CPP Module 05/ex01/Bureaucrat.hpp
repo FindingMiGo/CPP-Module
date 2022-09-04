@@ -8,6 +8,8 @@
 # define HIGHEST_GRADE 1
 # define LOWEST_GRADE 150
 
+class Form;
+
 class Bureaucrat{
 	private:
 		std::string _name;
@@ -22,7 +24,7 @@ class Bureaucrat{
 		int getGrade() const;
 		void promotion();
 		void demotion();
-		void signForm(Form &f);
+		void signForm(Form &f) const;
 
 		class GradeTooHighException : public std::exception {
 			const char *what() const throw();
@@ -32,5 +34,6 @@ class Bureaucrat{
 		};
 };
 
+std::ostream &operator<<(std::ostream &os,const Bureaucrat &bc);
 
 #endif

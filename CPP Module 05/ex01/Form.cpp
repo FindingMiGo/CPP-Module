@@ -1,3 +1,4 @@
+#include "Bureaucrat.hpp"
 #include "Form.hpp"
 
 Form::Form() : _name("default"), _gradeToSign(LOWEST_GRADE), _gradeToExec(LOWEST_GRADE), _beSigned(false){}
@@ -25,7 +26,7 @@ Form &Form::operator=(const Form &f){
 	return *this;
 }
 
-void Form::beSigned(Bureaucrat &bc){
+void Form::beSigned(const Bureaucrat &bc){
 	if (bc.getGrade() > _gradeToSign)
 		throw GradeTooLowException();
 	_beSigned = true;
@@ -49,4 +50,17 @@ const char *Form::GradeTooHighException::what() const throw(){
 
 const char *Form::GradeTooLowException::what() const throw(){
 	return "Grade too Low";
+}
+
+bool Form::getBeSigned() const{
+	return _beSigned;
+}
+
+std::ostream &operator<<(std::ostream &os, const Form &f)
+{
+	os << "Form name:\t"	<< f.getName()
+	<< "\ngrade to sign:\t" << f.getGradeToSign() 
+	<< "\ngrade to exec:\t" << f.getGradeToExec() 
+	<< "\nbe signed:\t" << f.getBeSigned();
+	return os;
 }
