@@ -22,7 +22,16 @@ void ShrubberyCreationForm::executeForm(Bureaucrat const &e) const{
 		throw GradeTooLowException();
 	if (!getBeSigned())
 		throw NoSignException();
-	std::string tree =	"木\n";
+	std::string tree =	" ■■■■■■■■\n"
+						"    ■\n"
+						"    ■     ■ ■■  ■■■■   ■■■■\n"
+						"    ■     ■■   ■■  ■  ■■  ■\n"
+						"    ■     ■■   ■   ■■ ■   ■■\n"
+						"    ■     ■    ■■■■■■ ■■■■■■\n"
+						"    ■     ■    ■      ■\n"
+						"    ■     ■    ■■     ■■\n"
+						"    ■     ■     ■■■■   ■■■■";
+
 	std::string fileName = _target + "_shrubery";
 	std::ofstream ofs(fileName.c_str());
 	if (ofs.fail()){
