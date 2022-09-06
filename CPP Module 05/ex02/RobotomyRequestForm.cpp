@@ -24,7 +24,7 @@ void RobotomyRequestForm::executeForm(Bureaucrat const &e) const{
 		throw GradeTooLowException();
 	if (!getBeSigned())
 		throw NoSignException();
-	std::cout << "ZAP ZAP ZAP" << std::endl;
+	std::cout << "ZAP ZAP ZAP... ";
 	srand(time(NULL));
 	if (rand() % 2 == 0){
 		std::cout << "Successful lobotomy for " << _target << std::endl;
