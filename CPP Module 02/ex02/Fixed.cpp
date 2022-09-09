@@ -103,28 +103,28 @@ Fixed Fixed::operator+(const Fixed &f) const {
 	Fixed ret;
 	ret.setRawBits(this->_value + f.getRawBits());
 	return ret;
-}	
+}
 
 Fixed Fixed::operator-(const Fixed &f) const {
 	Fixed ret;
 	ret.setRawBits(this->_value - f.getRawBits());
 	return ret;
-}	
+}
 
 Fixed Fixed::operator*(const Fixed &f) const {
 	Fixed ret;
 	long tmp = (long)this->_value * (long)f._value;
 	ret.setRawBits(tmp / (1 << this->_bit));
 	return ret;
-}	
+}
 
 Fixed Fixed::operator/(const Fixed &f) const {
-    if(f._value == 0){
-        return Fixed(0);
+	if(f._value == 0){
+		return Fixed(0);
 	}
 	Fixed ret;
 	long tmp = ((long)this->_value << this->_bit) / (long)f._value;
-    ret._value = tmp;
+	ret._value = tmp;
 	return ret;
 }
 
