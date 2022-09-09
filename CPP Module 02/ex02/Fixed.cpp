@@ -66,7 +66,7 @@ bool Fixed::operator>=(const Fixed &f) const{
 }
 
 bool Fixed::operator<=(const Fixed &f) const{
-	return _value >= f.getRawBits();
+	return _value <= f.getRawBits();
 }
 
 bool Fixed::operator==(const Fixed &f) const{
@@ -119,13 +119,14 @@ Fixed Fixed::operator*(const Fixed &f) const {
 }	
 
 Fixed Fixed::operator/(const Fixed &f) const {
-	Fixed ret;
-    if(f._value == 0)
+    if(f._value == 0){
         return Fixed(0);
+	}
+	Fixed ret;
 	long tmp = ((long)this->_value << this->_bit) / (long)f._value;
     ret._value = tmp;
 	return ret;
-}	
+}
 
 Fixed &Fixed::min(Fixed &a, Fixed &b){
 	if (a < b)
