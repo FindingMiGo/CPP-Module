@@ -6,12 +6,12 @@
 
 class FragTrap: virtual public ClapTrap{
 	public:
-	FragTrap();
-	FragTrap(std::string name);
-	FragTrap(const FragTrap &ft);
-	~FragTrap();
-	FragTrap &operator=(const FragTrap &ft);
-	void highFivesGuys();
+		FragTrap();
+		FragTrap(std::string name);
+		FragTrap(const FragTrap &ft);
+		~FragTrap();
+		FragTrap &operator=(const FragTrap &ft);
+		void highFivesGuys();
 };
 
 #endif
