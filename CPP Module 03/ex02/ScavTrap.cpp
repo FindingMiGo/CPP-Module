@@ -25,14 +25,14 @@ ScavTrap::ScavTrap(const ScavTrap &st) : ClapTrap(st){
 }
 
 ScavTrap &ScavTrap::operator=(const ScavTrap &st){
-    if(this != &st){
-        _name = st._name;
-        _hitPoints = st._hitPoints;
-        _energyPoints = st._energyPoints;
-        _attackDamage = st._attackDamage;
-    }
+	if(this != &st){
+		_name = st._name;
+		_hitPoints = st._hitPoints;
+		_energyPoints = st._energyPoints;
+		_attackDamage = st._attackDamage;
+	}
 	std::cout << "ScavTrap assignment operator called ("<< _name << ")" << std::endl;
-    return *this;
+	return *this;
 }
 
 void ScavTrap::attack(std::string const &target){

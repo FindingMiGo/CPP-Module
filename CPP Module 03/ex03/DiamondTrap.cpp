@@ -46,10 +46,10 @@ DiamondTrap &DiamondTrap::operator=(const DiamondTrap &dt)
 }
 
 void DiamondTrap::whoAmI(){
-    std::cout << "DiamondTrap name\t: " << _name <<std::endl;
-    std::cout << "ClapTrap name\t\t: " << ClapTrap::_name <<std::endl;
+	std::cout << "DiamondTrap name\t: " << _name <<std::endl;
+	std::cout << "ClapTrap name\t\t: " << ClapTrap::_name <<std::endl;
 }
 
 void DiamondTrap::attack(const std::string &target){
-    ScavTrap::attack(target);
+	ScavTrap::attack(target);
 }

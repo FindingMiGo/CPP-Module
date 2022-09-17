@@ -34,5 +34,5 @@ FragTrap &FragTrap::operator=(const FragTrap &ft){
 }
 
 void FragTrap::highFivesGuys(void){
-    std::cout<< "FragTrap "<< _name << " \"HIGH FIVE!\""<<std::endl;
+	std::cout<< "FragTrap "<< _name << " \"HIGH FIVE!\""<<std::endl;
 }

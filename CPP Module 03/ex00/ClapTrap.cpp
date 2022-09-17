@@ -1,19 +1,19 @@
 #include "ClapTrap.hpp"
 
 ClapTrap::ClapTrap(){
-    _name = "JohnDoe";
-    _hitPoints = 10;
-    _energyPoints = 10;
-    _attackDamage = 0;
+	_name = "JohnDoe";
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
 	std::cout << "Default constructor called ("<< _name << ")"<< std::endl;
 }
 
 ClapTrap::ClapTrap(std::string name){
-    _name = name;
-    _hitPoints = 10;
-    _energyPoints = 10;
-    _attackDamage = 0;
-    std::cout << "String constructor called ("<< _name << ")"<< std::endl;
+	_name = name;
+	_hitPoints = 10;
+	_energyPoints = 10;
+	_attackDamage = 0;
+	std::cout << "String constructor called ("<< _name << ")"<< std::endl;
 }
 
 ClapTrap::ClapTrap(const ClapTrap &ct){
@@ -75,16 +75,16 @@ void ClapTrap::beRepaired(unsigned int amount){
 		std::cout << "Not enough energypoints" << std::endl;
 		return ;
 	}
-    if(_hitPoints == 0)
-        std::cout << "ClapTrap " << _name << " is no reply. It's just corpse." << std::endl;
-    else
-    {
-        std::cout <<"ClapTrap "<< _name << " recovered " << amount << " points!" << std::endl;
-        _hitPoints += amount;
-    }
+	if(_hitPoints == 0)
+		std::cout << "ClapTrap " << _name << " is no reply. It's just corpse." << std::endl;
+	else
+	{
+		std::cout <<"ClapTrap "<< _name << " recovered " << amount << " points!" << std::endl;
+		_hitPoints += amount;
+	}
 	_energyPoints--;
 }
 
 unsigned int  ClapTrap::getAttackDamege(){
-    return(_attackDamage);
+	return(_attackDamage);
 }
