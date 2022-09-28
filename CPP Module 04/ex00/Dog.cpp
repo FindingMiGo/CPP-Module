@@ -2,16 +2,16 @@
 
 Dog::Dog():Animal(){
 	type = "Dog";
-	std::cout << "Constructor called (Dog)" << std::endl;
+	std::cout << "Dog constructor called" << std::endl;
 }
 
 Dog::Dog(const Dog &dog):Animal(){
 	*this = dog;
-	std::cout << "Copy constructor called (Dog)" << std::endl;
+	std::cout << "Dog copy constructor called" << std::endl;
 }
 
 Dog::~Dog(){
-	std::cout << "Destructor called (Dog)" << std::endl;
+	std::cout << "Dog destructor called" << std::endl;
 }
 
 Dog &Dog::operator=(const Dog &dog){
