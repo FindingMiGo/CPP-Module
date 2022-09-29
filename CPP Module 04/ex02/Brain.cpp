@@ -1,24 +1,37 @@
 #include "Brain.hpp"
 
 Brain::Brain(){
-	std::cout << "Constuctor called (Brain)" << std::endl;
+	std::cout << "Brain constuctor called" << std::endl;
 	for (int i = 0; i < 100; i++)
-		_ideas[i] = 'B';
+		ideas_[i] = "string";
+}
+
+Brain::Brain(const std::string &str){
+	std::cout << "Brain string constuctor called" << std::endl;
+	for (int i = 0; i < 100; i++)
+		ideas_[i] = str;
 }
 
 Brain::Brain(const Brain &b){
-	std::cout << "Copy Constuctor called (Brain)" << std::endl;
+	std::cout << "Brain copy Constuctor called" << std::endl;
 	*this = b;
 }
 
 Brain::~Brain(){
-	std::cout << "Destuctor called (Brain)" << std::endl;
+	std::cout << "Brain destuctor called" << std::endl;
 }
 
 Brain &Brain::operator=(const Brain &b){
 	if (this != &b)	{
 		for (int i = 0; i < 100; i++)
-			_ideas[i] = b._ideas[i];
+			ideas_[i] = b.ideas_[i];
 	}
 	return *this;
+}
+
+void Brain::printIdeas(){
+	std::cout << ideas_ << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ideas_[i] << " ";
+	std::cout << std::endl;
 }

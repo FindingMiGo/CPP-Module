@@ -15,6 +15,5 @@ int main()
 	c.makeSound();
 
 	// Animal a;
-
 	// a.makeSound();
 }
