@@ -10,9 +10,11 @@ class Cat:public Animal{
 	public:
 		Cat();
 		Cat(const Cat &Cat);
+		Cat(const std::string &str);
 		~Cat();
 		Cat &operator=(const Cat &Cat);
 		void makeSound()const;
+		void printBrain()const;
 };
 
 #endif

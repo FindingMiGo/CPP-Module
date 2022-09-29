@@ -3,7 +3,13 @@
 Brain::Brain(){
 	std::cout << "Brain constuctor called" << std::endl;
 	for (int i = 0; i < 100; i++)
-		_ideas[i] = 'B';
+		ideas_[i] = "string";
+}
+
+Brain::Brain(const std::string &str){
+	std::cout << "Brain string constuctor called" << std::endl;
+	for (int i = 0; i < 100; i++)
+		ideas_[i] = str;
 }
 
 Brain::Brain(const Brain &b){
@@ -18,7 +24,14 @@ Brain::~Brain(){
 Brain &Brain::operator=(const Brain &b){
 	if (this != &b)	{
 		for (int i = 0; i < 100; i++)
-			_ideas[i] = b._ideas[i];
+			ideas_[i] = b.ideas_[i];
 	}
 	return *this;
+}
+
+void Brain::printIdeas(){
+	std::cout << ideas_ << std::endl;
+	for (int i = 0; i < 100; i++)
+		std::cout << ideas_[i] << " ";
+	std::cout << std::endl;
 }
