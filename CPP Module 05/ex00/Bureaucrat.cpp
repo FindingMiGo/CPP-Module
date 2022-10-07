@@ -1,9 +1,9 @@
 #include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat() : _name("default"), _grade(LOWEST_GRADE) {}
+Bureaucrat::Bureaucrat() : name_("default"), grade_(LOWEST_GRADE) {}
 
 Bureaucrat::Bureaucrat(const std::string name, int grade)
-    : _name(name), _grade(grade) {
+    : name_(name), grade_(grade) {
   if (grade < HIGHEST_GRADE)
     throw GradeTooHighException();
   if (grade > LOWEST_GRADE)
@@ -16,28 +16,28 @@ Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat &Bureaucrat::operator=(const Bureaucrat &bc) {
   if (this != &bc) {
-    _grade = bc._grade;
-    _name = bc._name;
+    grade_ = bc.grade_;
+    name_ = bc.name_;
   }
   return *this;
 }
 
-std::string const &Bureaucrat::getName() const { return _name; }
+std::string const &Bureaucrat::getName() const { return name_; }
 
-int Bureaucrat::getGrade() const { return _grade; }
+int Bureaucrat::getGrade() const { return grade_; }
 
 void Bureaucrat::promotion() {
-  if (_grade <= HIGHEST_GRADE) {
+  if (grade_ <= HIGHEST_GRADE) {
     throw GradeTooHighException();
   }
-  _grade--;
+  grade_--;
 }
 
 void Bureaucrat::demotion() {
-  if (_grade >= LOWEST_GRADE) {
+  if (grade_ >= LOWEST_GRADE) {
     throw GradeTooLowException();
   }
-  _grade++;
+  grade_++;
 }
 
 const char *Bureaucrat::GradeTooHighException::what() const throw() {

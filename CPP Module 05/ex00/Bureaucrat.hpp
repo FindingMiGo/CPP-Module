@@ -10,8 +10,8 @@
 
 class Bureaucrat {
 private:
-  std::string _name;
-  int _grade;
+  std::string name_;
+  int grade_;
 
 public:
   Bureaucrat();
