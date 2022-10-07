@@ -9,7 +9,7 @@
 
 class RobotomyRequestForm : public Form{
 	private:
-		std::string _target;
+		std::string target_;
 	public:
 		RobotomyRequestForm();
 		RobotomyRequestForm(const std::string &target);
@@ -17,7 +17,7 @@ class RobotomyRequestForm : public Form{
 		virtual ~RobotomyRequestForm();
 		RobotomyRequestForm &operator=(const RobotomyRequestForm &rr);
 
-		void executeForm(Bureaucrat const &e) const;
+		void execute(Bureaucrat const &e) const;
 
 };
 

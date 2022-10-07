@@ -2,22 +2,22 @@
 #include "Bureaucrat.hpp"
 
 ShrubberyCreationForm::ShrubberyCreationForm() : Form("Shrubbery", SH_SIGN, SH_EXEC){
-	_target = "target";
+	target_ = "target";
 }
 
 ShrubberyCreationForm::ShrubberyCreationForm(const std::string &target) : Form(target, SH_SIGN, SH_EXEC){
-    _target = target;
+    target_ = target;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(){}
 
 ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &sc){
 	if(this != &sc)
-		_target = sc._target;
+		target_ = sc.target_;
 	return *this;
 }
 
-void ShrubberyCreationForm::executeForm(Bureaucrat const &e) const{
+void ShrubberyCreationForm::execute(Bureaucrat const &e) const{
 	if (getGradeToExec() < e.getGrade())
 		throw GradeTooLowException();
 	if (!getBeSigned())
@@ -32,7 +32,7 @@ void ShrubberyCreationForm::executeForm(Bureaucrat const &e) const{
 						"    ■     ■    ■■     ■■\n"
 						"    ■     ■     ■■■■   ■■■■";
 
-	std::string fileName = _target + "_shrubery";
+	std::string fileName = target_ + "_shrubery";
 	std::ofstream ofs(fileName.c_str());
 	if (ofs.fail()){
 		throw ("error output file open");
