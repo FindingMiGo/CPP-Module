@@ -18,7 +18,7 @@ public:
   ~ShrubberyCreationForm();
   ShrubberyCreationForm(const ShrubberyCreationForm &sc);
   ShrubberyCreationForm &operator=(const ShrubberyCreationForm &sc);
-  void executeForm(Bureaucrat const &e) const;
+  void execute(Bureaucrat const &e) const;
 };
 
 #endif

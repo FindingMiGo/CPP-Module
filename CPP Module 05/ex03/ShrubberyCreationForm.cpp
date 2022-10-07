@@ -20,11 +20,11 @@ ShrubberyCreationForm::operator=(const ShrubberyCreationForm &sc) {
   return *this;
 }
 
-void ShrubberyCreationForm::executeForm(Bureaucrat const &e) const {
-  if (getGradeToExec() < e.getGrade())
-    throw GradeTooLowException();
+void ShrubberyCreationForm::execute(Bureaucrat const &e) const {
   if (!getBeSigned())
     throw NoSignException();
+  if (getGradeToExec() < e.getGrade())
+    throw GradeTooLowException();
   std::string tree = " ■■■■■■■■\n"
                      "    ■\n"
                      "    ■     ■ ■■  ■■■■   ■■■■\n"

@@ -6,17 +6,18 @@
 #define PR_SIGN 25
 #define PR_EXEC 5
 
-class PresidentialPardonForm : public Form{
-	private:
-		std::string target_;
-	public:
-	    PresidentialPardonForm();
-		PresidentialPardonForm(const std::string &target);
-		PresidentialPardonForm(const PresidentialPardonForm &pp);
-		~PresidentialPardonForm();
-		PresidentialPardonForm &operator=(const PresidentialPardonForm &pp);
+class PresidentialPardonForm : public Form {
+private:
+  std::string target_;
 
-		void execute(Bureaucrat const &e) const;
+public:
+  PresidentialPardonForm();
+  PresidentialPardonForm(const std::string &target);
+  PresidentialPardonForm(const PresidentialPardonForm &pp);
+  ~PresidentialPardonForm();
+  PresidentialPardonForm &operator=(const PresidentialPardonForm &pp);
+
+  void execute(Bureaucrat const &e) const;
 };
 
 #endif

@@ -12,7 +12,7 @@ int main() {
     rrf = someRandomIntern.makeForm("robotomy request", "Bender");
     Bureaucrat a("test", 1);
     a.signForm(*rrf);
-    rrf->executeForm(a);
+    a.executeForm(*rrf);
     std::cout << *rrf << std::endl;
     delete rrf;
   }
@@ -25,7 +25,7 @@ int main() {
     rrf = someRandomIntern.makeForm("shrubbery creation", "Bender Brain");
     Bureaucrat a("test", 1);
     a.signForm(*rrf);
-    rrf->executeForm(a);
+    a.executeForm(*rrf);
     std::cout << *rrf << std::endl;
     delete rrf;
   }
@@ -38,7 +38,7 @@ int main() {
     rrf = someRandomIntern.makeForm("presidential pardon", "Intern");
     Bureaucrat a("test", 1);
     a.signForm(*rrf);
-    rrf->executeForm(a);
+    a.executeForm(*rrf);
     std::cout << *rrf << std::endl;
     delete rrf;
   }
