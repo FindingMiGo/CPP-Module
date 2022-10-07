@@ -7,10 +7,8 @@
 void test(Bureaucrat &b, Form &f, bool sign) {
   std::cout << b << std::endl;
   if (sign == true) {
-    std::cout << "Try to sign...\n";
 	b.signForm(f);
   }
-  std::cout << "Try to Execute...\n";
   b.executeForm(f);
 }
 

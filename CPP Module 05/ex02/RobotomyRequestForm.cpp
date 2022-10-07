@@ -20,10 +20,10 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &r
 }
 
 void RobotomyRequestForm::execute(Bureaucrat const &e) const{
-	if (getGradeToExec() < e.getGrade())
-		throw GradeTooLowException();
 	if (!getBeSigned())
 		throw NoSignException();
+	if (getGradeToExec() < e.getGrade())
+		throw GradeTooLowException();
 	std::cout << "ZAP ZAP ZAP... ";
 	srand(time(NULL));
 	if (rand() % 2 == 0){
