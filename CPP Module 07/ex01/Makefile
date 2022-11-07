@@ -4,11 +4,8 @@ SRCS		= main.cpp
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I.
 OBJS		= $(SRCS:.cpp=.o)
-HEADER		= Makefile iter.hpp
 
 all:		$(NAME)
-
-$(OBJS): $(HEADER)
 
 $(NAME):	$(OBJS)
 			$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
