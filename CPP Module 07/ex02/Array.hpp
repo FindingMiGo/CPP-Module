@@ -16,6 +16,7 @@ public:
   Array(const Array &a);
   Array &operator=(const Array &a);
   T &operator[](const unsigned int &i);
+  const T &operator[](const unsigned int &i) const;
   class OutOfBoundsException : public std::exception {
   public:
     const char *what() const throw();
@@ -55,6 +56,15 @@ template <typename T> Array<T> &Array<T>::operator=(const Array &a) {
 };
 
 template <typename T> T &Array<T>::operator[](const unsigned int &i) {
+  if (i >= size_) {
+    throw OutOfBoundsException();
+  } else {
+    return elements_[i];
+  }
+}
+
+template <typename T>
+const T &Array<T>::operator[](const unsigned int &i) const {
   if (i >= size_) {
     throw OutOfBoundsException();
   } else {

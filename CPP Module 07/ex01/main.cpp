@@ -1,7 +1,9 @@
 #include "iter.hpp"
 #include <iostream>
 
-template <typename T> void print(T &str) { std::cout << str << std::endl; }
+template <typename T> void print(const T &str) {
+  std::cout << str << std::endl;
+}
 
 int main() {
   {

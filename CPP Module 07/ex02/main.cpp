@@ -4,7 +4,7 @@
 
 #define MAX 10
 
-template <typename T> void test(Array<T> &a) {
+template <typename T> void test(const Array<T> &a) {
   try {
     std::cout << a[MAX + 1] << std::endl;
   } catch (const std::exception &e) {
@@ -31,6 +31,16 @@ int main() {
     }
     std::cout << std::endl;
     test(arr);
+  }
+
+  {
+    const Array<int> int_arr(MAX);
+
+    for (unsigned int i = 0; i < MAX; i++) {
+      std::cout << int_arr[i] << " ";
+    }
+    std::cout << std::endl;
+    test(int_arr);
   }
 
   {
