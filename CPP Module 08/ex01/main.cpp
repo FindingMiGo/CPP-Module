@@ -33,7 +33,7 @@ int main() {
   {
     Span sp(1);
     try {
-      std::cout << "shotest span: " << sp.shortestSpan() << std::endl;
+      std::cout << "shortest span: " << sp.shortestSpan() << std::endl;
     } catch (std::exception &e) {
       std::cout << e.what() << std::endl;
     }
@@ -57,7 +57,7 @@ int main() {
     std::cout << "size: " << v.size() << std::endl;
     std::cout << "head: " << v.at(0) << std::endl;
     std::cout << "tail: " << v.at(SIZE - 1) << std::endl;
-    std::cout << "shotest span: " << sp.shortestSpan() << std::endl;
+    std::cout << "shortest span: " << sp.shortestSpan() << std::endl;
     std::cout << "longest span: " << sp.longestSpan() << std::endl;
   }
   return 0;
