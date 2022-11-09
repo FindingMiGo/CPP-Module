@@ -33,10 +33,9 @@ int Span::shortestSpan() {
     throw FewerElements();
   std::vector<int> tmp(v_);
   std::sort(tmp.begin(), tmp.end());
-  unsigned int span = std::numeric_limits<unsigned int>::max();
   std::vector<int>::iterator itr = tmp.begin();
   std::vector<int>::iterator end = tmp.end();
-  span = std::abs(*itr - *(itr + 1));
+  unsigned int span = std::abs(*itr - *(itr + 1));
   for (; (itr + 1) != end; itr++) {
     if (span > std::abs(*itr - *(itr + 1)))
       span = std::abs(*itr - *(itr + 1));
