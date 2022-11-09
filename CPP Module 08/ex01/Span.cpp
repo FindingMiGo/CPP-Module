@@ -1,7 +1,7 @@
 #include "Span.hpp"
 
 Span::Span() {
-  size_ = DEFAULT;
+  size_ = 0;
   v_.reserve(size_);
 }
 
@@ -43,6 +43,7 @@ int Span::shortestSpan() {
   }
   return span;
 }
+
 int Span::longestSpan() {
   if (v_.size() < 2)
     throw FewerElements();

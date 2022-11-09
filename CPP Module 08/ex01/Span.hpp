@@ -8,8 +8,6 @@
 #include <vector>
 #include <limits>
 
-#define DEFAULT 999
-
 class Span {
 private:
   unsigned int size_;
