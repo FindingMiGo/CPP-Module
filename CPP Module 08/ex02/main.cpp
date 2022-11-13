@@ -57,6 +57,8 @@ void test2() {
   std::list<int>::iterator litr = lst.begin();
   for (int i = 0; i < 10; i++) {
     std::cout << "mstack: " << *mitr << "\tlist: " << *litr << std::endl;
+    mitr++;
+    litr++;
   }
 }
 
