@@ -1,6 +1,6 @@
 NAME		= a.out
 
-SRCS		= main.cpp Span.cpp
+SRCS		= main.cpp
 CXX			= c++
 CXXFLAGS	= -Wall -Wextra -Werror -std=c++98 -I.
 OBJS		= $(SRCS:.cpp=.o)
