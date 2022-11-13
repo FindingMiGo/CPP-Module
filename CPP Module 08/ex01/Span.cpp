@@ -28,22 +28,22 @@ void Span::addNumber(int n) {
   v_.push_back(n);
 }
 
-int Span::shortestSpan() {
+unsigned int Span::shortestSpan() {
   if (v_.size() < 2)
     throw FewerElements();
   std::vector<int> tmp(v_);
   std::sort(tmp.begin(), tmp.end());
   std::vector<int>::iterator itr = tmp.begin();
-  std::vector<int>::iterator end = tmp.end();
-  unsigned int span = std::abs(*itr - *(itr + 1));
-  for (; (itr + 1) != end; itr++) {
-    if (span > std::abs(*itr - *(itr + 1)))
-      span = std::abs(*itr - *(itr + 1));
+  unsigned int s = *(itr + 1) - *itr;
+  for (std::vector<int>::iterator end = tmp.end(); (itr + 1) != end; itr++) {
+    unsigned int tmp2 = *(itr + 1) - *itr;
+    if (s > tmp2)
+      s = tmp2;
   }
-  return span;
+  return s;
 }
 
-int Span::longestSpan() {
+unsigned int Span::longestSpan() {
   if (v_.size() < 2)
     throw FewerElements();
   int max = *std::max_element(v_.begin(), v_.end());

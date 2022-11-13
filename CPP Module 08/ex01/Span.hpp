@@ -6,6 +6,7 @@
 #include <iostream>
 #include <iterator>
 #include <vector>
+#include <limits>
 
 class Span {
 private:
@@ -20,8 +21,8 @@ public:
   Span &operator=(const Span &s);
   void addNumber(int n);
   void fill(std::vector<int> nums);
-  int shortestSpan();
-  int longestSpan();
+  unsigned int shortestSpan();
+  unsigned int longestSpan();
   class OverCapacity : public std::exception {
     const char *what() const throw();
   };
